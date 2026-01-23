@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+/*@font-face {
+    font-family: ;
+    src: url(fonts/);
+}*/
+
+html {
+    overscroll-behavior: none;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#landing-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+#social-media-bar {
+    background-color: lightblue;
+    padding: 40px;
+}
+
+#gallery {
+    display: block;
+    columns: 20% 3;
+    height: auto;
+    column-gap: 1rem;
+
+}
