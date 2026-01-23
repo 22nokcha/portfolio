@@ -2,14 +2,65 @@
     box-sizing: border-box;
 }
 
-/*@font-face {
-    font-family: ;
-    src: url(fonts/);
-}*/
+@font-face {
+    font-family: bartle;
+    src: url(fonts/BBH_Bartle/BBHBartle-Regular.ttf)
+}
+
+@font-face {
+    font-family: hammer;
+    src: url(fonts/Hammersmith_One/HammersmithOne-Regular.ttf)
+}
+
+@font-face {
+    font-family: cal;
+    src: url(fonts/Cal_Sans/CalSans-Regular.ttf)
+}
+
+@font-face {
+    font-family: DM;
+    src: url(fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf)
+}
+
+@font-face {
+    font-family: fig;
+    src: url(fonts/Figtree/Figtree-VariableFont_wght.ttf)
+}
+
+@font-face {
+    font-family: onest;
+    src: url(fonts/Onest/Onest-VariableFont_wght.ttf)
+}
 
 html {
     overscroll-behavior: none;
     overflow-x: hidden;
+}
+
+h1 {
+    font-family: cal, 'Courier New', Courier, monospace;
+    font-size: 40px;
+    margin-top: 20px;
+    margin-left: 25px;
+    letter-spacing: 3px;
+    margin-bottom: 0px;
+}
+
+h2 {
+    font-family: fig, 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+#nav {
+    display: flex;
+}
+
+#label {
+    font-family: hammer, 'Courier New', Courier, monospace;
+    font-size: 15px;
+    margin-left: 25px;
+    margin-top: 2px;
+    margin-bottom: 20px;
 }
 
 body {
@@ -17,6 +68,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
+    background-color: white;
 }
 
 #landing-img {
@@ -30,10 +82,12 @@ body {
     padding: 40px;
 }
 
-#gallery {
-    display: block;
-    columns: 20% 3;
-    height: auto;
-    column-gap: 1rem;
+#digital-gallery, #trad-gallery {
+    column-count: 2;
+    column-gap: 4px;
 
+}
+
+#digital-gallery img, #trad-gallery img {
+    width: 100%;
 }
