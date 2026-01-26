@@ -32,25 +32,6 @@
     src: url(fonts/Onest/Onest-VariableFont_wght.ttf)
 }
 
-@media only screen and (max-width: 750px) {
-
-    #digital-gallery,
-    #trad-gallery {
-        column-count: 2;
-        column-gap: 6px;
-        margin-left: 6px;
-        margin-right: 6px;
-        margin-bottom: 6px;
-    }
-
-    #digital-gallery img,
-    #trad-gallery img {
-        width: 100%;
-        margin-bottom: 0px;
-    }
-
-}
-
 html {
     overscroll-behavior: none;
     overflow-x: hidden;
@@ -59,8 +40,6 @@ html {
 h1 {
     font-family: cal, 'Courier New', Courier, monospace;
     font-size: 40px;
-    margin-top: 20px;
-    margin-left: 25px;
     letter-spacing: 3px;
     margin-bottom: 0px;
 }
@@ -68,18 +47,43 @@ h1 {
 h2 {
     font-family: fig, 'Courier New', Courier, monospace;
     font-size: 25px;
+    margin-bottom: 10px;
+}
+
+#text {
+    background-color: lightgrey;
+    padding: 30px;
+    margin-top: 30px;
 }
 
 #name-bar {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    color: aliceblue;
+    margin-bottom: 0px;
+    margin-left: 30px;
+}
+
+#hero {
+    background-image: url(images/notopsides-Archway.png);
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0px;
+    padding: 0px;
 }
 
 #label {
     font-family: hammer, 'Courier New', Courier, monospace;
     font-size: 15px;
-    margin-left: 25px;
-    margin-top: 2px;
-    margin-bottom: 20px;
+    margin-top: 0px;
+    color: aliceblue;
+    gap: 0px;
+    margin-left: 30px;
 }
 
 #label:hover {
@@ -90,7 +94,8 @@ body {
     width: 100vw;
     height: 100vh;
     margin: 0;
-    background-color: rgb(255, 255, 255);
+    padding: 0;
+    background-color: rgb(30, 30, 30);
 }
 
 #landing-img {
@@ -100,13 +105,12 @@ body {
     margin-bottom: 6px;
 }
 
-#digital-gallery,
-#value-gallery, #trad-gallery {
+#digital-gallery {
     column-count: 3;
     column-gap: 6px;
-    margin-left: 6px;
-    margin-right: 6px;
-    margin-bottom: 0px;
+    background-color: rgb(224, 224, 224);
+    padding: 6px;
+    padding-bottom: 0px;
 }
 
 #digital-gallery img,
@@ -123,15 +127,28 @@ body {
     cursor: pointer;
 }
 
-#bar {
-    background-color: rgb(213, 213, 213);
-    padding: 40px;
-    margin-bottom: 6px;
+#value-gallery {
+    column-count: 3;
+    column-gap: 6px;
+    background-color: rgb(0, 0, 0);
+    padding: 6px;
 }
+
+#trad-gallery {
+    column-count: 3;
+    column-gap: 6px;
+    background-color: rgb(50, 50, 50);
+    padding: 6px;
+}
+
+/*#bar {
+    background-color: rgb(0, 0, 0);
+    padding: 40px;
+}*/
 
 .name-button {
     text-decoration: none;
-    color: black;
+    color: aliceblue;
 }
 
 .name-button:hover {
@@ -139,13 +156,42 @@ body {
 }
 
 .button {
-    display: flex;
     text-decoration: none;
-    color: black;
-    justify-content: flex-end;
+    color: aliceblue;
+    margin-right: 30px;
 }
 
 .button:hover {
     color: brown;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 750px) {
+
+    #digital-gallery,
+    #value-gallery,
+    #trad-gallery {
+        column-count: 2;
+    }
+
+    #digital-gallery img,
+    #value-gallery img,
+    #trad-gallery img {
+        width: 100%;
+        margin-bottom: 2px;
+    }
+
+    .name-button {
+        text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
+
+    }
+
+    #label {
+        text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.6);
+    }
+
+    .button {
+        text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
+    }
+
 }
