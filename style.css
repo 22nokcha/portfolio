@@ -51,8 +51,14 @@ h2 {
     font-size: 25px;
 }
 
-#nav {
+#name-bar {
     display: flex;
+}
+
+#bar {
+    background-color: rgb(213, 213, 213);
+    padding: 3%;
+    margin-bottom: 6px;
 }
 
 #label {
@@ -74,25 +80,32 @@ body {
     display: block;
     max-width: 100%;
     height: auto;
-    margin-bottom: 6px;
+    margin-bottom: 0.5%;
 }
 
 #digital-gallery, #trad-gallery {
     column-count: 3;
-    column-gap: 6px;
-    margin-left: 6px;
-    margin-right: 6px;
+    column-gap: 0.5%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
 
 }
 
 #digital-gallery img, #trad-gallery img {
     width: 100%;
-    margin-bottom: 2px;
+    margin-bottom: 0%;
+}
+
+.name-button {
+    text-decoration: none;
+    color: black;
 }
 
 .button {
+    display: flex;
     text-decoration: none;
     color: black;
+    justify-content: flex-end;
 }
 .button:hover {
     color: brown;
