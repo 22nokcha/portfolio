@@ -32,6 +32,24 @@
     src: url(fonts/Onest/Onest-VariableFont_wght.ttf)
 }
 
+@media only screen and (max-width: 750px) {
+
+    #digital-gallery,
+    #trad-gallery {
+        column-count: 2;
+        column-gap: 0.5%;
+        margin-left: 0.5%;
+        margin-right: 0.5%;
+    }
+
+    #digital-gallery img,
+    #trad-gallery img {
+        width: 100%;
+        margin-bottom: 0%;
+    }
+
+}
+
 html {
     overscroll-behavior: none;
     overflow-x: hidden;
@@ -53,12 +71,7 @@ h2 {
 
 #name-bar {
     display: flex;
-}
-
-#bar {
-    background-color: rgb(213, 213, 213);
-    padding: 3%;
-    margin-bottom: 6px;
+    margin-top: 0.5%;
 }
 
 #label {
@@ -66,7 +79,7 @@ h2 {
     font-size: 15px;
     margin-left: 25px;
     margin-top: 2px;
-    margin-bottom: 20px;
+    margin-bottom: 2%;
 }
 
 body {
@@ -80,25 +93,42 @@ body {
     display: block;
     max-width: 100%;
     height: auto;
+    margin-bottom: 1%;
+}
+
+#digital-gallery,
+#trad-gallery {
+    column-count: 3;
+    column-gap: 0.6%;
+    margin-left: 2%;
+    margin-right: 2%;
     margin-bottom: 0.5%;
 }
 
-#digital-gallery, #trad-gallery {
-    column-count: 3;
-    column-gap: 0.5%;
-    margin-left: 0.5%;
-    margin-right: 0.5%;
-
+#digital-gallery img,
+#trad-gallery img {
+    width: 100%;
+    margin-bottom: 1%;
 }
 
-#digital-gallery img, #trad-gallery img {
-    width: 100%;
-    margin-bottom: 0%;
+#digital-gallery img:hover, #trad-gallery img:hover {
+    filter: brightness(70%);
+    cursor:pointer;
+}
+
+#bar {
+    background-color: rgb(213, 213, 213);
+    padding: 2%;
+    margin-bottom: 1%;
 }
 
 .name-button {
     text-decoration: none;
     color: black;
+}
+
+.name-button:hover {
+    cursor: pointer;
 }
 
 .button {
@@ -107,6 +137,8 @@ body {
     color: black;
     justify-content: flex-end;
 }
+
 .button:hover {
     color: brown;
+    cursor: pointer;
 }
