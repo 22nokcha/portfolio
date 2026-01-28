@@ -67,7 +67,7 @@ h2 {
 }
 
 #hero {
-    background-image: url(images/notopsides-Archway.png);
+    background-image: url(images/noborder-Archway.png);
     width: 100vw;
     height: 100vh;
     background-size: cover;
@@ -75,6 +75,11 @@ h2 {
     background-repeat: no-repeat;
     margin: 0px;
     padding: 0px;
+}
+
+#bar {
+    background-color: black;
+    padding: 20px;
 }
 
 #label {
