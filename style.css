@@ -37,6 +37,15 @@ html {
     overflow-x: hidden;
 }
 
+.hide-scrollbar {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;     
+}
+
+hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 h1 {
     font-family: cal, 'Courier New', Courier, monospace;
     font-size: 40px;
@@ -107,9 +116,9 @@ body {
 
 #digital-gallery {
     column-count: 3;
-    column-gap: 6px;
-    background-color: rgb(224, 224, 224);
-    padding: 6px;
+    column-gap: 10px;
+    background-color: rgb(32, 32, 32);
+    padding: 10px;
     padding-bottom: 0px;
 }
 
@@ -117,7 +126,7 @@ body {
 #value-gallery img,
 #trad-gallery img {
     width: 100%;
-    margin-bottom: 2px;
+    margin-bottom: 6px;
 }
 
 #digital-gallery img:hover,
@@ -129,16 +138,16 @@ body {
 
 #value-gallery {
     column-count: 3;
-    column-gap: 6px;
+    column-gap: 10px;
     background-color: rgb(0, 0, 0);
-    padding: 6px;
+    padding: 10px;
 }
 
 #trad-gallery {
     column-count: 3;
-    column-gap: 6px;
+    column-gap: 10px;
     background-color: rgb(50, 50, 50);
-    padding: 6px;
+    padding: 10px;
 }
 
 /*#bar {
