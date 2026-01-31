@@ -63,7 +63,7 @@ h2 {
     align-items: baseline;
     color: aliceblue;
     margin-bottom: 0px;
-    margin-left: 30px;
+    margin-left: 40px;
 }
 
 #hero {
@@ -88,7 +88,7 @@ h2 {
     margin-top: 0px;
     color: aliceblue;
     gap: 0px;
-    margin-left: 30px;
+    margin-left: 40px;
 }
 
 #label:hover {
@@ -163,7 +163,7 @@ body {
 .button {
     text-decoration: none;
     color: aliceblue;
-    margin-right: 30px;
+    margin-right: 40px;
 }
 
 .button:hover {
@@ -183,8 +183,12 @@ body {
     #value-gallery img,
     #trad-gallery img {
         width: 100%;
-        margin-bottom: 2px;
+        margin-bottom: 6px;
     }
+
+}
+
+@media only screen and (max-width: 1000px) {
 
     .name-button {
         text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
