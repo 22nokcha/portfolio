@@ -12,23 +12,26 @@
 <body>
 
     <div id="hero">
-        <div id="name-bar">
+        <div id="header">
             <h1><a href="index.html" class="name-button">ANDREA KIM</a></h1>
             <h2><a href="about.html" class="button">about</a></h2>
             <!--<h2><a href="contact.html" class="button">contact</a></h2>-->
         </div>
         <h2 id="label">Concept Art / Illustration</h2>
 
-        <div id="social-media-bar">
-            
+        <div id="social-media">
+            <a href="https://www.instagram.com/22nokcha" target="_blank"><img src="images/instagram-96.png"></a>
+            <a href="https://www.artstation.com/andreakim89" target="_blank"><img src="images/artstation-96.png"></a>
+            <a href="https://www.linkedin.com/in/andrea-kim-a8018324a/" target="_blank"><img src="images/linkedin-96.png"></a>
         </div>
+    </div>
+
     </div>
 
     <div id="bar"></div>
 
     <!--<img id="landing-img" src="images/Archway.png">-->
 
-    <div id="social-media-bar"></div>
 
     <div id="digital-gallery">
         <img src="images/Interstellar-Love.jpg">
@@ -37,23 +40,19 @@
         <img src="images/RS-concept.PNG">
 
 
-        <img src="images/study1.png">
         <img src="images/magicboys_wip.png">
         <img src="images/newsea.png">
         <img src="images/plane.jpg">
-        <img src="images/handmaiden-2.PNG">
 
         <img src="images/proj2_snowfort.png">
-        <!--<img src="images/knight.png">-->
         <img src="images/ascend.png">
         <img src="images/newdesert_figure.png">
         <img src="images/Fallen_WIP.png">
-        <img src="images/handmaiden-1.PNG">
-        
+
     </div>
 
     <div id="value-gallery">
-        <img src="images/1.png">
+        <img src="images/study1.png">
         <img src="images/2.png">
         <img src="images/3.png">
         <img src="images/4.png">
@@ -62,6 +61,9 @@
         <img src="images/7.png">
         <img src="images/8.png">
         <img src="images/9.png">
+        <img src="images/1.png">
+        <img src="images/handmaiden-2.PNG">
+        <img src="images/handmaiden-1.PNG">
     </div>
 
     <div id="trad-gallery">
@@ -78,6 +80,45 @@
         <img src="images/tree-3.JPG">
         <img src="images/branches.JPG">
     </div>
+
+    <div class="popup">
+        <span>&times;</span>
+        <img src="images/Interstellar-Love.jpg">
+    </div>
+
+    <p id="footer">© 2026 Andrea Kim, ALL RIGHTS RESERVED</p>
+
+
+    <script>
+        document.querySelectorAll('#digital-gallery img').forEach(image => {
+            image.onclick = () => {
+                document.querySelector('.popup').style.display = 'flex';
+                document.querySelector('.popup img').src = image.getAttribute('src');
+            }
+
+        });
+
+        document.querySelectorAll('#value-gallery img').forEach(image => {
+            image.onclick = () => {
+                document.querySelector('.popup').style.display = 'flex';
+                document.querySelector('.popup img').src = image.getAttribute('src');
+            }
+
+        });
+
+        document.querySelectorAll('#trad-gallery img').forEach(image => {
+            image.onclick = () => {
+                document.querySelector('.popup').style.display = 'flex';
+                document.querySelector('.popup img').src = image.getAttribute('src');
+            }
+
+        });
+
+        document.querySelector('.popup span').onclick = () => {
+            document.querySelector('.popup').style.display = 'none';
+        }
+
+    </script>
 
 </body>
 

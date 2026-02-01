@@ -50,22 +50,15 @@ h2 {
     margin-bottom: 10px;
 }
 
-#text {
-    background-color: lightgrey;
-    padding: 30px;
-    margin-top: 30px;
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(30, 30, 30);
 }
 
-#name-bar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
-    color: aliceblue;
-    margin-bottom: 0px;
-    margin-left: 40px;
-}
-
+/* Landing Image */
 #hero {
     background-image: url(images/noborder-Archway.png);
     width: 100vw;
@@ -77,32 +70,6 @@ h2 {
     padding: 0px;
 }
 
-#bar {
-    background-color: black;
-    padding: 20px;
-}
-
-#label {
-    font-family: hammer, 'Courier New', Courier, monospace;
-    font-size: 15px;
-    margin-top: 0px;
-    color: aliceblue;
-    gap: 0px;
-    margin-left: 40px;
-}
-
-#label:hover {
-    cursor: default;
-}
-
-body {
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(30, 30, 30);
-}
-
 #landing-img {
     display: block;
     max-width: 100%;
@@ -110,12 +77,88 @@ body {
     margin-bottom: 6px;
 }
 
+/*#bar {
+    background-color: black;
+    padding: 20px;
+}*/
+
+/* Header */
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    color: aliceblue;
+    margin-bottom: 0px;
+    margin-left: 40px;
+    user-select: none;
+}
+
+/* Name Button */
+.name-button {
+    text-decoration: none;
+    color: aliceblue;
+    -webkit-user-drag: none;
+}
+
+.name-button:hover {
+    cursor: pointer;
+}
+
+/* 'Concept Art / Illustration' */
+#label {
+    font-family: hammer, 'Courier New', Courier, monospace;
+    font-size: 15px;
+    margin-top: 0px;
+    color: aliceblue;
+    gap: 0px;
+    margin-left: 40px;
+    user-select: none;
+}
+
+#label:hover {
+    cursor: default;
+}
+
+/* About Button */
+.button {
+    text-decoration: none;
+    color: aliceblue;
+    margin-right: 40px;
+    -webkit-user-drag: none;
+}
+
+.button:hover {
+    color: brown;
+    cursor: pointer;
+}
+
+/* About Page */
+#text {
+    font-family: onest, 'Courier New', Courier, monospace;
+    background-color: lightgrey;
+    padding: 40px;
+    margin-top: 30px;
+}
+
+#social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+#social-media img {
+    width: 30%;
+}
+
+/* Gallery */
 #digital-gallery {
     column-count: 3;
     column-gap: 10px;
-    background-color: rgb(32, 32, 32);
+    background-color: rgb(50, 50, 50);
     padding: 10px;
-    padding-bottom: 0px;
+    padding-bottom: 30px;
+    padding-top: 30px;
 }
 
 #digital-gallery img,
@@ -123,6 +166,8 @@ body {
 #trad-gallery img {
     width: 100%;
     margin-bottom: 6px;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 #digital-gallery img:hover,
@@ -137,6 +182,8 @@ body {
     column-gap: 10px;
     background-color: rgb(0, 0, 0);
     padding: 10px;
+    padding-bottom: 40px;
+    padding-top: 40px;
 }
 
 #trad-gallery {
@@ -144,32 +191,63 @@ body {
     column-gap: 10px;
     background-color: rgb(50, 50, 50);
     padding: 10px;
+    padding-bottom: 40px;
+    padding-top: 40px;
 }
 
-/*#bar {
-    background-color: rgb(0, 0, 0);
-    padding: 40px;
-}*/
-
-.name-button {
-    text-decoration: none;
-    color: aliceblue;
+/* Image Modal*/
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+    justify-content: center;
+    align-items: center;
 }
 
-.name-button:hover {
-    cursor: pointer;
+.popup span { /* 'x' button */
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    font-weight: bolder;
+    color: white;
+    z-index: 1000;
+    user-select: none;
 }
 
-.button {
-    text-decoration: none;
-    color: aliceblue;
-    margin-right: 40px;
-}
-
-.button:hover {
+.popup span:hover {
     color: brown;
     cursor: pointer;
 }
+
+.popup img {
+    position: relative;
+    object-fit: contain;
+    width: 920px;
+    height: auto;
+    max-height: 100vh;
+    
+    user-select: none;
+    overflow: hidden;
+    -webkit-user-drag: none;
+}
+
+#footer {
+    font-family: onest, 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    color: rgb(21, 21, 21);
+    background-color: rgb(50, 50, 50);
+    margin-top: 0;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
 
 @media only screen and (max-width: 750px) {
 
@@ -184,6 +262,11 @@ body {
     #trad-gallery img {
         width: 100%;
         margin-bottom: 6px;
+    }
+
+    .popup img {
+        width: 90%;
+
     }
 
 }
