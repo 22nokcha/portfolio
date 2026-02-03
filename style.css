@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    /*outline: 1px solid red !important;*/
 }
 
 @font-face {
@@ -38,6 +39,7 @@ html {
 }
 
 h1 {
+    display: flex;
     font-family: cal, 'Courier New', Courier, monospace;
     font-size: 40px;
     letter-spacing: 3px;
@@ -90,15 +92,21 @@ body {
     align-items: baseline;
     color: aliceblue;
     margin-bottom: 0px;
-    margin-left: 40px;
     user-select: none;
+    padding:40px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 /* Name Button */
 .name-button {
+    display: flex;
     text-decoration: none;
     color: aliceblue;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.7);
     -webkit-user-drag: none;
+    white-space: nowrap;
+
 }
 
 .name-button:hover {
@@ -111,8 +119,21 @@ body {
     font-size: 15px;
     margin-top: 0px;
     color: aliceblue;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.7);
     gap: 0px;
     margin-left: 40px;
+    user-select: none;
+
+}
+
+#label-mobile {
+    display: none;
+    font-family: hammer, 'Courier New', Courier, monospace;
+    font-size: 18px;
+    margin-top: 0px;
+    color: aliceblue;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.7);
+    gap: 0px;
     user-select: none;
 }
 
@@ -124,8 +145,9 @@ body {
 .button {
     text-decoration: none;
     color: aliceblue;
-    margin-right: 40px;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.7);
     -webkit-user-drag: none;
+
 }
 
 .button:hover {
@@ -142,13 +164,27 @@ body {
 }
 
 #social-media {
+    height: 96vh;
     display: flex;
-    flex-direction: row;
-    justify-content: end;
+    justify-content: center;
+    align-items: safe flex-end;
+    padding-bottom: 110px;
+    object-fit: contain;
+    gap: 30px;
+    user-select: none;
+}
+
+#social-media a {
+    display: inline-flex;
+    align-items: center;
+    -webkit-user-drag: none;
 }
 
 #social-media img {
-    width: 30%;
+    display: block;
+    width: 32px;
+    -webkit-user-drag: none;
+    mix-blend-mode: color-dodge;
 }
 
 /* Gallery */
@@ -200,7 +236,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgb(0, 0, 0, 0.9);
+    background-color: rgb(0, 0, 0, 0.82);
+    backdrop-filter: blur(5px);
     height: 100%;
     width: 100%;
     z-index: 100;
@@ -209,7 +246,8 @@ body {
     align-items: center;
 }
 
-.popup span { /* 'x' button */
+.popup span {
+    /* 'x' button */
     position: absolute;
     top: 20px;
     right: 30px;
@@ -228,16 +266,16 @@ body {
 .popup img {
     position: relative;
     object-fit: contain;
-    width: 920px;
+    width: 70%;
     height: auto;
     max-height: 100vh;
-    
+
     user-select: none;
     overflow: hidden;
     -webkit-user-drag: none;
 }
 
-#footer {
+#copyright {
     font-family: onest, 'Courier New', Courier, monospace;
     display: flex;
     justify-content: center;
@@ -257,33 +295,47 @@ body {
         column-count: 2;
     }
 
-    #digital-gallery img,
-    #value-gallery img,
-    #trad-gallery img {
-        width: 100%;
-        margin-bottom: 6px;
-    }
-
     .popup img {
-        width: 90%;
-
+        width: 85%;
     }
+
+    #social-media {
+        display: flex;
+        align-items: flex-end;
+    }
+
+
 
 }
 
-@media only screen and (max-width: 1000px) {
-
-    .name-button {
-        text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
-
+@media only screen and (max-width: 430px) {
+    #header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     #label {
-        text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.6);
+        display: none;
     }
 
-    .button {
-        text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
+    #label-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #social-media {
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 160px;
+        gap: 40px;
+    }
+
+    #social-media img {
+        width: 40px;
     }
 
 }
