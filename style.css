@@ -1,11 +1,5 @@
 * {
     box-sizing: border-box;
-    /*outline: 1px solid red !important;*/
-}
-
-@font-face {
-    font-family: bartle;
-    src: url(fonts/BBH_Bartle/BBHBartle-Regular.ttf)
 }
 
 @font-face {
@@ -16,11 +10,6 @@
 @font-face {
     font-family: cal;
     src: url(fonts/Cal_Sans/CalSans-Regular.ttf)
-}
-
-@font-face {
-    font-family: DM;
-    src: url(fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf)
 }
 
 @font-face {
@@ -78,11 +67,6 @@ body {
     height: auto;
     margin-bottom: 6px;
 }
-
-/*#bar {
-    background-color: black;
-    padding: 20px;
-}*/
 
 /* Header */
 #header {
@@ -286,9 +270,7 @@ body {
     padding-bottom: 50px;
 }
 
-
 @media only screen and (max-width: 750px) {
-
     #digital-gallery,
     #value-gallery,
     #trad-gallery {
@@ -303,9 +285,6 @@ body {
         display: flex;
         align-items: flex-end;
     }
-
-
-
 }
 
 @media only screen and (max-width: 430px) {
@@ -337,5 +316,4 @@ body {
     #social-media img {
         width: 40px;
     }
-
 }

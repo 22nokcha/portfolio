@@ -10,7 +10,6 @@
 <link rel="stylesheet" href="style.css">
 
 <body>
-
     <div id="hero">
         <div id="header">
             <h1><a href="index.html" class="name-button">ANDREA KIM</a></h1>
@@ -26,22 +25,16 @@
             <a href="https://www.linkedin.com/in/andrea-kim-a8018324a/" target="_blank"><img src="images/linkedin-96.png"></a>
             <a href="mailto:kimandrea005@gmail.com" target="_blank"><img src="images/email-96.png"></a>
         </div>
-
     </div>
-
     </div>
 
     <div id="bar"></div>
-
-    <!--<img id="landing-img" src="images/Archway.png">-->
-
 
     <div id="digital-gallery">
         <img src="images/Interstellar-Love.jpg">
         <img src="images/Archway.png">
         <img src="images/RS-study.png">
         <img src="images/RS-concept.PNG">
-
 
         <img src="images/magicboys_wip.png">
         <img src="images/newsea.png">
@@ -51,7 +44,6 @@
         <img src="images/ascend.png">
         <img src="images/newdesert_figure.png">
         <!--<img src="images/Fallen_WIP.png">-->
-
     </div>
 
     <div id="value-gallery">
@@ -91,14 +83,12 @@
 
     <p id="copyright">© 2026 Andrea Kim, ALL RIGHTS RESERVED</p>
 
-
     <script>
         document.querySelectorAll('#digital-gallery img').forEach(image => {
             image.onclick = () => {
                 document.querySelector('.popup').style.display = 'flex';
                 document.querySelector('.popup img').src = image.getAttribute('src');
             }
-
         });
 
         document.querySelectorAll('#value-gallery img').forEach(image => {
@@ -120,9 +110,6 @@
         document.querySelector('.popup span').onclick = () => {
             document.querySelector('.popup').style.display = 'none';
         }
-
     </script>
-
 </body>
-
 </html>
