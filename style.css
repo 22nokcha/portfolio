@@ -87,7 +87,7 @@ body {
     display: flex;
     text-decoration: none;
     color: rgb(240, 248, 255, 1);
-    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
     -webkit-user-drag: none;
     white-space: nowrap;
 
@@ -250,7 +250,7 @@ body {
 .popup img {
     position: relative;
     object-fit: contain;
-    width: 70%;
+    width: 62%;
     height: auto;
     max-height: 100vh;
 
@@ -293,6 +293,11 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .name-button {
+        text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+
     }
 
     #label {
