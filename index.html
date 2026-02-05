@@ -10,6 +10,9 @@
 <link rel="stylesheet" href="style.css">
 
 <body>
+    <div id="to-top">
+        <img width="50px" height="50px" src="images/white-arrow-100.svg" alt="scroll to top" draggable="false" />
+    </div>
     <div id="hero">
         <div id="header">
             <h1><a href="index.html" class="name-button">ANDREA KIM</a></h1>
@@ -22,7 +25,8 @@
         <div id="social-media">
             <a href="https://www.instagram.com/22nokcha" target="_blank"><img src="images/instagram-96.png"></a>
             <a href="https://www.artstation.com/andreakim89" target="_blank"><img src="images/artstation-96.png"></a>
-            <a href="https://www.linkedin.com/in/andrea-kim-a8018324a/" target="_blank"><img src="images/linkedin-96.png"></a>
+            <a href="https://www.linkedin.com/in/andrea-kim-a8018324a/" target="_blank"><img
+                    src="images/linkedin-96.png"></a>
             <a href="mailto:kimandrea005@gmail.com" target="_blank"><img src="images/email-96.png"></a>
         </div>
     </div>
@@ -36,14 +40,13 @@
         <img src="images/newsea.png">
         <img src="images/RS-concept.PNG">
 
-        <img src="images/magicboys_wip.png">
         <img src="images/RS-study.png">
         <img src="images/proj2_snowfort.png">
         <img src="images/plane.jpg">
 
         <img src="images/newdesert_figure.png">
         <img src="images/ascend.png">
-        <img src="images/Fallen_WIP.png">
+
 
         <!--<img src="images/Fallen_WIP.png">-->
     </div>
@@ -113,6 +116,24 @@
         document.querySelector('.popup span').onclick = () => {
             document.querySelector('.popup').style.display = 'none';
         }
+
+        const toTopButton = document.querySelector('#to-top');
+        document.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                toTopButton.classList.add('show');
+            } else {
+                toTopButton.classList.remove('show');
+            }
+        });
+
+       toTopButton.addEventListener("click", function(){
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+       });
+
     </script>
 </body>
+
 </html>

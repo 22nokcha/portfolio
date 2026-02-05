@@ -25,6 +25,7 @@
 html {
     overscroll-behavior: none;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 h1 {
@@ -47,6 +48,29 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgb(30, 30, 30);
+}
+
+#to-top {
+    z-index: 1000;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    filter:drop-shadow(0px 0px 3px black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: bottom 200ms, transform 200ms;
+    user-select: none;
+}
+
+#to-top:hover {
+    bottom: 35px;
+    cursor: pointer;
+}
+
+#to-top.show {
+    transform:scale(1);
 }
 
 /* Landing Image */
