@@ -312,6 +312,11 @@ body {
 }
 
 @media only screen and (max-width: 430px) {
+    #to-top {
+        right: 15px;
+        bottom: 20px;
+      
+    }
     #header {
         display: flex;
         flex-direction: column;
